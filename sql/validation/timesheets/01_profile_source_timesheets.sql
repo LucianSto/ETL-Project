@@ -150,3 +150,24 @@ FROM SOURCE_TIMESHEETS
 GROUP BY EmployeeId
 ORDER BY NumberOfRows DESC;
 --Result : range 29-46
+
+
+
+/*
+# Data Quality Issues
+
+| Issue | Details |
+|-------|---------|
+| Leading/trailing spaces | Employee IDs contain leading/trailing spaces (E017, E034, E051, E068). |
+| Inconsistent letter case | Employee IDs are stored using different letter cases (e.g. `E019` and `e019`). |
+| Inconsistent project codes | Same project appears with different codes (`PRJ01` / `PRJ-01`). |
+| Inconsistent project names | Same project appears with different names (`Banking App` / `banking app`). |
+| Missing project names | 61 records have `NULL` values for `ProjectName`. |
+| Duplicate records | 24 duplicate `TimesheetId` values and 24 duplicate business records. |
+| Data types stored as text | `WorkDate` and `Hours` are stored as `VARCHAR2` and require conversion in STAGING. |
+
+
+# Summary
+
+The source dataset contains several data quality issues that must be addressed in the STAGING layer before loading the data into the Star Schema.
+*/
