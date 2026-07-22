@@ -4,7 +4,7 @@
 
 -- 1. Verificare nr de randuri in Source
 SELECT COUNT (*) AS source_row_count
-FROM source_absecences;
+FROM source_absences;
 
 -- 2. Verificare nr de randuri in Staging
 SELECT COUNT(*) AS staging_row_count
@@ -47,7 +47,8 @@ FROM staging_absences
 WHERE absence_id IS NULL
    OR employee_id IS NULL
    OR start_date IS NULL
-   OR end_date IS NULL;
+   OR end_date IS NULL
+   OR normalized_absence_type IS NULL;
 
 -- 9. Verificarea duplicatelor pe baza AbsenceID
 SELECT
@@ -62,3 +63,26 @@ SELECT
     (SELECT COUNT(*) FROM source_absences) AS source_rows,
     (SELECT COUNT(*) FROM staging_absences) AS staging_rows
 FROM dual;
+
+-- 11. Verificarea daca toti angajatii valizi exista in DIM_EMPLOYEE
+SELECT DISTINCT
+    s.employee_id
+FROM staging_absences s
+LEFT JOIN dim_employee e
+    ON e.employee_id = s.employee_id
+WHERE s.validation_status = 'VALID'
+    AND e.employee_key IS NULL;
+
+-- 12. Verificarea daca toate tipurile de absenta exista in DIM_ACTIVITY_TYPE
+SELECT DISTINCT
+    s.normalized_absence_type
+FROM staging_absences s
+LEFT JOIN dim_activity_type a
+    ON a.activity_type_name = s.normalized_absence_type
+WHERE s.validation_status = 'VALID'
+    AND a.activity_type_key IS NULL;
+
+-- 13. Verificarea numarului de randuri in FACT_ACTIVITY pentru absente
+SELECT COUNT(*) AS fact_absences_row_count
+FROM fact_activity
+WHERE source_system = 'Absences';
