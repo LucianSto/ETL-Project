@@ -1,0 +1,48 @@
+AbsenceId,EmployeeId,EmployeeName,Grade,Discipline,LineManager,DeliveryUnit,StartDate,EndDate,AbsenceType
+A0001,E002,Employee 2,Mid,Data,Alice Popescu,DU Banking,2026-07-21,2026-07-22,AL
+A0002,E003,Employee 3,Senior,Data,Laura Stan,DU Insurance,2026-07-17,2026-07-19,Sick Leave
+A0003,E004,Employee 4,Senior,Data,Laura Stan,DU Payments,2026-06-19,2026-06-19,Annual Leave
+A0004,E005,Employee 5,Junior,Data,Alice Popescu,DU Banking,2026-07-05,2026-07-05,AL
+A0005,E006,Employee 6,Junior,Cloud,Laura Stan,DU Banking,2026-07-08,2026-07-09,SL
+A0006,E008,Employee 8,Senior,Cloud,Mihai Ionescu,DU Banking,2026-06-04,2026-06-06,Annual Leave
+A0007,E010,Employee 10,Junior,Cloud,Mihai Ionescu,DU Payments,2026-06-05,2026-06-07,annual leave
+A0008,E011,Employee 11,Mid,Data,Alice Popescu,DU Payments,2026-07-07,2026-07-07,SL
+A0009,E012,Employee 12,Junior,Data,Mihai Ionescu,DU Banking,2026-07-10,2026-07-10,Sick Leave
+A0010,E014,Employee 14,Junior,Cloud,Mihai Ionescu,DU Insurance,2026-06-21,2026-06-22,annual leave
+A0011,E016,Employee 16,Mid,Cloud,Laura Stan,DU Payments,2026-06-17,2026-06-18,annual leave
+A0012,E018,Employee 18,Junior,Cloud,Alice Popescu,DU Payments,2026-06-21,2026-06-21,Annual Leave
+A0013,e019,Employee 19,Junior,Data,Alice Popescu,DU Payments,2026-07-07,2026-07-07,Annual Leave
+A0014,E020,Employee 20,Mid,BI,Laura Stan,DU Payments,2026-07-03,2026-07-04,annual leave
+A0015,E024,Employee 24,Junior,Cloud,Laura Stan,DU Banking,2026-06-11,2026-06-12,SL
+A0016,E029,Employee 29,Junior,Data,Laura Stan,DU Insurance,2026-07-23,2026-07-25,AL
+A0017,E031,Employee 31,Mid,Cloud,Mihai Ionescu,DU Banking,2026-06-09,2026-06-10,Annual Leave
+A0018, E034,Employee 34,Senior,BI,Laura Stan,DU Payments,2026-06-19,2026-06-21,annual leave
+A0019,E036,Employee 36,Mid,Data,Alice Popescu,DU Banking,2026-07-11,2026-07-12,SL
+A0020,E037,Employee 37,Junior,Cloud,Alice Popescu,DU Insurance,2026-07-25,2026-07-25,Annual Leave
+A0021,E040,Employee 40,Mid,Cloud,Alice Popescu,DU Insurance,2026-06-22,2026-06-22,AL
+A0022,E041,Employee 41,Senior,Data,Laura Stan,DU Insurance,2026-06-29,2026-07-01,Sick Leave
+A0023,E042,Employee 42,Mid,Cloud,Mihai Ionescu,DU Banking,2026-06-08,2026-06-08,annual leave
+A0024,E043,Employee 43,Mid,BI,Alice Popescu,DU Payments,2026-07-24,2026-07-25,SL
+A0025,E044,Employee 44,Junior,Cloud,Laura Stan,DU Payments,2026-06-28,2026-06-28,Annual Leave
+A0026,E045,Employee 45,Senior,Data,Laura Stan,DU Banking,2026-07-21,2026-07-21,AL
+A0027,E046,Employee 46,Senior,BI,Laura Stan,DU Insurance,2026-06-16,2026-06-18,Annual Leave
+A0028,E047,Employee 47,Senior,Data,Alice Popescu,DU Payments,2026-07-06,2026-07-07,SL
+A0029,E050,Employee 50,Junior,BI,Mihai Ionescu,DU Banking,2026-06-11,2026-06-11,Sick Leave
+A0030, E051,Employee 51,Junior,Data,Laura Stan,DU Banking,2026-07-18,2026-07-19,Sick Leave
+A0031,E055,Employee 55,Senior,Cloud,Mihai Ionescu,DU Banking,2026-07-21,2026-07-23,Annual Leave
+A0032,E056,Employee 56,Senior,Cloud,Laura Stan,DU Banking,2026-06-03,2026-06-04,annual leave
+A0033,e057,Employee 57,Senior,BI,Mihai Ionescu,DU Insurance,2026-06-30,2026-07-01,AL
+A0034,E060,Employee 60,Junior,BI,Alice Popescu,DU Insurance,2026-07-13,2026-07-13,Sick Leave
+A0035,E061,Employee 61,Senior,Data,Laura Stan,DU Banking,2026-07-26,2026-07-26,AL
+A0036,E062,Employee 62,Junior,Data,Laura Stan,DU Insurance,2026-07-03,2026-07-04,SL
+A0037,E063,Employee 63,Junior,Data,Alice Popescu,DU Banking,2026-06-02,2026-06-02,AL
+A0038,E064,Employee 64,Mid,Data,Laura Stan,DU Banking,2026-06-17,2026-06-17,Annual Leave
+A0039,E065,Employee 65,Mid,Cloud,Mihai Ionescu,DU Banking,2026-06-23,2026-06-25,AL
+A0040,E066,Employee 66,Senior,Data,Laura Stan,DU Insurance,2026-07-03,2026-07-03,Sick Leave
+A0041, E068,Employee 68,Mid,Data,Alice Popescu,DU Banking,2026-06-03,2026-06-05,Sick Leave
+A0042,E069,Employee 69,Senior,BI,Mihai Ionescu,DU Payments,2026-07-22,2026-07-24,annual leave
+A0043,E070,Employee 70,Mid,BI,Laura Stan,DU Banking,2026-06-05,2026-06-07,AL
+A0044,E073,Employee 73,Junior,Data,Alice Popescu,DU Banking,2026-06-20,2026-06-22,AL
+A0045,E075,Employee 75,Junior,BI,Mihai Ionescu,DU Banking,2026-07-15,2026-07-16,SL
+A0046,e076,Employee 76,Junior,BI,Laura Stan,DU Banking,2026-06-27,2026-06-29,Sick Leave
+A0047,E080,Employee 80,Junior,Data,Mihai Ionescu,DU Banking,2026-07-06,2026-07-06,AL
