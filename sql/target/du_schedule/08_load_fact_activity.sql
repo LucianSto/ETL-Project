@@ -1,0 +1,61 @@
+/*
+=========================================================
+Module  : DU Schedule
+Layer   : TARGET
+
+Purpose:
+Populate FACT_ACTIVITY using data from STAGING_DUSCHEDULE.
+
+Only new activity records are inserted.
+=========================================================
+*/
+
+INSERT INTO FACT_ACTIVITY
+(
+    EMPLOYEE_KEY,
+    DATE_KEY,
+    ACTIVITY_TYPE_KEY,
+    PROJECT_KEY,
+    TRAINING_KEY,
+    HOURS_WORKED,
+    SOURCE_SYSTEM
+)
+
+SELECT
+
+    DE.EMPLOYEE_KEY,
+
+    DD.DATE_KEY,
+
+    DAT.ACTIVITY_TYPE_KEY,
+
+    NULL AS PROJECT_KEY,
+
+    NULL AS TRAINING_KEY,
+
+    NULL AS HOURS_WORKED,
+
+    'DU Schedule' AS SOURCE_SYSTEM
+
+FROM STAGING_DUSCHEDULE STG
+
+INNER JOIN DIM_EMPLOYEE DE
+ON STG.EmployeeId = DE.EMPLOYEE_ID
+
+INNER JOIN DIM_ACTIVITY_TYPE DAT
+ON STG.ActivityCode = DAT.ACTIVITY_TYPE_NAME
+
+INNER JOIN DIM_DATE DD
+ON STG.ActivityDate = DD.FULL_DATE
+
+WHERE NOT EXISTS
+(
+    SELECT 1
+    FROM FACT_ACTIVITY FA
+
+    WHERE FA.EMPLOYEE_KEY      = DE.EMPLOYEE_KEY
+      AND FA.DATE_KEY          = DD.DATE_KEY
+      AND FA.ACTIVITY_TYPE_KEY = DAT.ACTIVITY_TYPE_KEY
+);
+
+COMMIT;
