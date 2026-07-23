@@ -88,7 +88,7 @@ Coloanele care reprezinta zile calendaristice vor fi transformate intr-un camp d
 
 ## Regula 8 - Eliminarea inregistrarilor duplicate
 
-Dupa transformarea datelor se vor elimina eventualele inregistrari duplicate.
+Se va verifica existența eventualelor înregistrări duplicate. Dacă sunt identificate, acestea vor fi analizate înainte de încărcarea în modelul dimensional.
 
 O inregistrare este considerata duplicata daca are aceeasi combinatie:
 
